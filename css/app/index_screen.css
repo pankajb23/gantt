@@ -49,3 +49,55 @@ html,body{
 table, tr, th, td{
     border:1px solid black;
 }
+td, th{
+    font-size: 15px;
+    font-family: "Courier New";
+}
+#popForm1{
+    height:100%;
+    width:100%;
+    background-color: black;
+    position: fixed;
+    top:0;
+    left:0;
+    overflow: hidden;
+    opacity: .70;
+}
+#centerForm{
+    left:25%;
+    top:20%;
+    height:500px;
+    width:700px;
+    position: fixed;
+    background-color: white;
+    opacity: 1;
+    border-radius: 25px;
+    z-index: 2;
+}
+#headerNewActivity{
+    height:30px;
+    padding-left: 45%;
+    background-color: green;
+}
+#footer_Activity_Input_Form{
+    padding-left: 25%;
+    padding-top:40px;
+    font-size:10px;
+    font-family: "Courier New";
+}
+#footer_Activity_Input_Form  table  tr  td {
+    border-style: none;
+}
+#activity_Input_Form {
+    border-style: none;
+    font-weight: bold;
+}
+input {
+    background-color:transparent;
+    border: 0px solid;
+    height:30px;
+    width:260px;
+}
+input:focus {
+    outline:none;
+}

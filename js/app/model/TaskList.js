@@ -12,7 +12,9 @@ define(['underscore','jquery','backbone'],function(_,$,Backbone){
         /*
         Setting the default value of the the model
          */
-        idAttribute:'primaryKey',
+        //idAttribute only for those id's which we want to sync with the backend unique key
+        //hence idAttribute would be same as the designed
+        idAttribute:'',
         defaults:{
             type:0,
             value:0,
@@ -20,7 +22,8 @@ define(['underscore','jquery','backbone'],function(_,$,Backbone){
             startDate:0,
             endDate:0,
             activityStatus:0,
-            activityCompletedPercent:0
+            activityCompletedPercent:0,
+            daySpent:0
         },
         initialize:function(){
 
@@ -34,7 +37,6 @@ define(['underscore','jquery','backbone'],function(_,$,Backbone){
         initialize:function(){
 
         }
-
     });
     return Task;
 });

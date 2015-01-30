@@ -12,7 +12,8 @@ define(['underscore','jquery','backbone','moment','src/model/headerModel','handl
     var headerList={};
     headerList.RowView = Backbone.View.extend({
         model:header.Model,
-        el:$('th'),
+        tagName:'th',
+        className: 'resizable',
         template: JST.rowThHandlebar,
         events:{
 
@@ -21,13 +22,14 @@ define(['underscore','jquery','backbone','moment','src/model/headerModel','handl
 
         },
         render:function(){
-            this.$el.html(this.template(this.model.toJSON()));
+            (this.$el).html(this.template(this.model.toJSON()));
             return this;
         }
     });
     headerList.GridView = Backbone.View.extend({
         model: header.collection,
-        el:$('tr'),
+        tagName:'tr',
+
         initialize:function(){
             this.loadAjax();
         },
@@ -47,13 +49,23 @@ define(['underscore','jquery','backbone','moment','src/model/headerModel','handl
                 success:function(){
                     deferred.resolve();
                     self.model = headers;
-                    self.render();
+                    self.renderHeader();
                 },
                 error:function(){
                     deferred.reject();
                 }
             });
             return deferred.promise();
+        },
+        renderHeader: function(){
+            var self = this;
+            self.$el.html('');
+            _.each(self.model.toArray(), function(dataModel){
+                var headerElement = new headerList.RowView({model: dataModel});
+                (self.$el).append(headerElement.render().$el);
+            });
+           //mediator.trigger("renderTableHeader", self.$el);
+            return this;
         }
     });
     return new headerList.GridView();

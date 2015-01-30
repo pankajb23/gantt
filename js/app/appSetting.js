@@ -12,5 +12,9 @@ used for setting various things in the app like timing settings and others
  */
 define(['jquery','moment','underscore','Backbone'],function($, moment, _, Backbone){
     var urlRoot = "../rest/loadSettings";   //load app setting from this file
+    ///app setting for various things like format of time primarily
+    var loadAjax = function(){
 
+    }
+    var  appSettings = loadAjax();
 });

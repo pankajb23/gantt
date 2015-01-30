@@ -6,7 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
-require(['src/top_div_form']);
-require(['src/bottom_div']);
+
 require(['src/views/tableView']);
 require(['src/basicmock']);
+require(['src/bottom_div']);
+require(['src/top_div_form']);

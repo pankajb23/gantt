@@ -21,8 +21,8 @@ define(['underscore','jquery','jquery-ui.min','backbone'],function(_,$,Backbone)
                 $('#right-pane').width(containerWidth - currentWidth-20);
             }
         });
-        ///for resizing the two adjacent divs
 
+        ///for resizing the two adjacent divs
         $(".resizable th").resizable({
             handles: 'e',
             start: function(event, ui){
