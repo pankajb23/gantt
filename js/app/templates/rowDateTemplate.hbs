@@ -1,5 +1,17 @@
-<td class="sno-block">{{sno}}</td>
-<td class="name-block">{{name}}</td>
-<td class="time-block"><input type="date" val="{{startDate}}"></td>
-<td class="time-block"><input type="date" val="{{endDate}}"></td>
+<td class="sno-block">
+    <nav class="primary_nav_wrap">
+        <ul>
+            <li>
+                <a href="#" class="show_list"><img src="img/app/row_add.png" width="10" height="10"/></a>
+            </li>
+        </ul>
+</td>
+<td class="name-block">
+    <div class="display-block">
+        <img src="img/app/toggle_collapse.png" height="20px" width="20px" class="change-Expand-contract">
+        <input type="text" name="activity-Name" value="{{activityName}}">
+    </div>
+</td>
+<td class="time-block"><input type="date" name="start-date"></td>
+<td class="time-block"><input type="date" name="end-date"></td>
 <td class="daySpent-block">{{daySpent}}</td>

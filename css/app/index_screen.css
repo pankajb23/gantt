@@ -14,8 +14,9 @@ html,body{
     border:solid 1px black ;
 }
 #div-bottom{
-    width:100%;
+    width:90%;
     height:80%;
+    margin-left: 5%;
     border-bottom: solid 1px black;
     border-left: solid 1px black;;
     border-right: solid 1px black;
@@ -51,6 +52,7 @@ table, tr, th, td{
 }
 td, th{
     font-size: 15px;
+    overflow: hidden;
     font-family: "Courier New";
 }
 #popForm1{
@@ -61,7 +63,8 @@ td, th{
     top:0;
     left:0;
     overflow: hidden;
-    opacity: .70;
+    opacity: 0;
+    Z-INDEX: 99;
 }
 #centerForm{
     left:25%;
@@ -72,7 +75,7 @@ td, th{
     background-color: white;
     opacity: 1;
     border-radius: 25px;
-    z-index: 2;
+    /*z-index: 2;*/
 }
 #headerNewActivity{
     height:30px;
@@ -96,8 +99,13 @@ input {
     background-color:transparent;
     border: 0px solid;
     height:30px;
-    width:260px;
+    width:130px;
 }
 input:focus {
-    outline:none;
+
+}
+.display-block{
+    display: inline-block;
+    min-width:170px;
+    max-height: 60px;
 }

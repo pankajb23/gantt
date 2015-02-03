@@ -23,10 +23,14 @@ define(['underscore','jquery','backbone'],function(_,$,Backbone){
             endDate:0,
             activityStatus:0,
             activityCompletedPercent:0,
-            daySpent:0
+            daySpent:0,
+            activityName:"Activity name"
         },
         initialize:function(){
 
+        },
+        setActivity: function(activityName){
+            this.activityName = activityName;
         }
     });
     Task.Collection = Backbone.Collection.extend({
@@ -34,6 +38,7 @@ define(['underscore','jquery','backbone'],function(_,$,Backbone){
         url:function(){
             return urlRoot;
         },
+        /*It turns out collection can also listen to changes in their models*/
         initialize:function(){
 
         }
